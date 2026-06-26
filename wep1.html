@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaming World</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+background:#1f1f1f;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+color:#00ff99;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:350px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(to right,#000,#222);
+}
+
+.hero h2{
+font-size:45px;
+color:#00ff99;
+}
+
+.hero p{
+margin:15px;
+font-size:20px;
+}
+
+button{
+padding:12px 25px;
+background:#00ff99;
+border:none;
+font-size:18px;
+cursor:pointer;
+border-radius:8px;
+}
+
+.games{
+padding:40px;
+text-align:center;
+}
+
+.games h2{
+margin-bottom:30px;
+font-size:35px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#222;
+padding:15px;
+border-radius:10px;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card h3{
+margin:15px 0;
+color:#00ff99;
+}
+
+footer{
+background:#1f1f1f;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🎮 Gaming World</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Games</a>
+<a href="#">News</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Welcome To Gaming World</h2>
+<p>Discover the Best Games Ever!</p>
+<button>Explore</button>
+</section>
+
+<section class="games">
+<h2>🔥 Best Games</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e" alt="">
+<h3>Minecraft</h3>
+<p>Build anything you imagine.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420" alt="">
+<h3>GTA V</h3>
+<p>Open World Action.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8" alt="">
+<h3>Fortnite</h3>
+<p>Battle Royale Adventure.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f" alt="">
+<h3>Call of Duty</h3>
+<p>Epic FPS Battles.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Gaming World | Designed by Eyad</p>
+</footer>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
+<footer>
+    <p>© 2026 Gaming World</p>
+    <p>Made by <strong>Eyad Allam</strong></p>
+</footer>
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e" alt="">
+    <h3 onclick="showGame('minecraft')">Minecraft</h3>
+    <p>Click the game name to learn more.</p>
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420" alt="">
+    <h3 onclick="showGame('gta')">GTA V</h3>
+    <p>Click the game name to learn more.</p>
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8" alt="">
+    <h3 onclick="showGame('fortnite')">Fortnite</h3>
+    <p>Click the game name to learn more.</p>
+</div>
+
+<div class="card">
+    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f" alt="">
+    <h3 onclick="showGame('cod')">Call of Duty</h3>
+    <p>Click the game name to learn more.</p>
+</div>
+<script>
+function showGame(game){
+
+if(game=="minecraft"){
+alert(
+"Minecraft\n\n" +
+"Release: 2011\n" +
+"Genre: Sandbox, Survival\n" +
+"Developer: Mojang Studios\n" +
+"Platforms: PC, PlayStation, Xbox, Nintendo Switch, Mobile\n\n" +
+"Description:\nBuild, explore, mine resources, and survive in a block-based open world."
+);
+}
+
+else if(game=="gta"){
+alert(
+"GTA V\n\n" +
+"Release: 2013\n" +
+"Genre: Open World, Action\n" +
+"Developer: Rockstar Games\n" +
+"Platforms: PC, PlayStation, Xbox\n\n" +
+"Description:\nExplore Los Santos, complete missions, drive cars, and play GTA Online."
+);
+}
+
+else if(game=="fortnite"){
+alert(
+"Fortnite\n\n" +
+"Release: 2017\n" +
+"Genre: Battle Royale\n" +
+"Developer: Epic Games\n" +
+"Platforms: PC, PlayStation, Xbox, Switch, Mobile\n\n" +
+"Description:\nFight against 100 players, build structures, and become the last survivor."
+);
+}
+
+else if(game=="cod"){
+alert(
+"Call of Duty\n\n" +
+"Genre: First-Person Shooter\n" +
+"Developer: Activision\n" +
+"Platforms: PC, PlayStation, Xbox\n\n" +
+"Description:\nA fast-paced shooting game with multiplayer, zombies, and campaign modes."
+);
+}
+
+}
+</script>
+<section class="news">
+    <h2>📰 Gaming News</h2>
+
+    <div class="news-card">
+        <h3>🎮 GTA VI Release Updates</h3>
+        <p>Rockstar Games has revealed new information about GTA VI, including improved graphics and a larger open world.</p>
+    </div>
+
+    <div class="news-card">
+        <h3>⚔️ Minecraft New Update</h3>
+        <p>The latest Minecraft update adds new mobs, blocks, and gameplay improvements.</p>
+    </div>
+
+    <div class="news-card">
+        <h3>🏆 Fortnite New Season</h3>
+        <p>Epic Games has launched a new Fortnite season with new weapons, skins, and map changes.</p>
+    </div>
+
+    <div class="news-card">
+        <h3>🔥 Call of Duty Event</h3>
+        <p>A new limited-time event is now available with exclusive rewards and multiplayer maps.</p>
+    </div>
+
